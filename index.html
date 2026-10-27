@@ -296,7 +296,7 @@ footer p{margin:10px 0 0;}
 .sessions span{font-family:var(--head);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:20px;border:1px solid var(--c,var(--gold));color:var(--c,var(--gold));background:rgba(27,12,32,.5);}
 .sessions span.rec{background:var(--c,var(--gold));color:var(--crown);}
 .legend{font-size:.85rem;color:var(--faint);margin-top:8px;}
-.tl-stops{grid-template-columns:repeat(7,1fr);}
+.tl-stops{grid-template-columns:repeat(8,1fr);}
 @media (max-width:760px){.tl-stops{grid-template-columns:repeat(4,1fr);}}
 /* The Build tab: every practice in one place (Soul Family Blueprint standard, 2026-10-16) */
 .pill .foot{justify-content:space-between;}
@@ -334,11 +334,11 @@ footer p{margin:10px 0 0;}
     <p class="kicker">Soul Family Blueprint</p>
     <h1>Molly <em>Ancel</em></h1>
     <p class="sub">Three months of sessions, written down so they stay with you</p>
-    <p class="dek">Everything from our time together so far: what each session asked of your body, your gift and your heart, the practices I gave you, and the threads that keep coming back. Your words, wherever I could use them. We’re halfway through the container, so this page will keep growing.</p>
+    <p class="dek">Everything from our time together so far: what each session asked of your body, your gift and your heart, the practices I gave you, and the threads that keep coming back. Your words, wherever I could use them. We’re two thirds of the way through the container, so this page will keep growing.</p>
     <div class="meta-row">
-      <span class="chip"><b>6</b> sessions</span>
+      <span class="chip"><b>7</b> sessions</span>
       <span class="chip">July to October 2026</span>
-      <span class="chip">Sacred Container · <b>5</b> of 9</span>
+      <span class="chip">Sacred Container · <b>6</b> of 9</span>
       <span class="chip"><b id="rxcount">0</b> practices</span>
       <span class="chip"><b id="thcount">0</b> common threads</span>
     </div>
@@ -353,7 +353,7 @@ footer p{margin:10px 0 0;}
   <div class="wide">
     <p class="eyebrow" style="--c:var(--teal)">At a glance</p>
     <h2>Where you <em style="--c:var(--gold)">are</em></h2>
-    <p class="lede">The short version, before the detail. Six sessions so far, the five things worth carrying, and the themes that run through all of it.</p>
+    <p class="lede">The short version, before the detail. Seven sessions so far, the five things worth carrying, and the themes that run through all of it.</p>
     <div class="g-grid">
       <div>
         <p class="g-label">Our sessions · latest first</p>
@@ -453,7 +453,10 @@ const G = {
   hearth:['Golden Hearth','Your name for the work with your hands: divine home. Blessing and clearing people’s homes while you clean them.','Your words','home'],
   uvflame:['The Ultraviolet Angelic Fire prayer','The clearing prayer you say in the mornings, and more than once on the hard days.','A prayer','flame'],
   circle:['Drawing the circle','Before you sit with anyone, draw a circle around the space. What surfaces gets set down inside it, never carried out of the room.','A teaching','shield'],
-  temple:['The temple of the heart','A heart that isn’t handed over but kept and tended. Anyone is welcome who takes their shoes off and respects the agreements.','A teaching','home']
+  temple:['The temple of the heart','A heart that isn’t handed over but kept and tended. Anyone is welcome who takes their shoes off and respects the agreements.','A teaching','home'],
+  boat:['Your own boat','Your vision from October 27. Off the lifeboat and into the water, other boats calling. Not those. Swim back to land, build your own boat, then get back in the water in it. The boat is your body.','Your words','wave'],
+  wesee:['We’ll see','The farmer in the old parable. Every time the neighbors called something good luck or bad luck, he said: we’ll see. The truth isn’t good or bad. It just is.','A teaching','compass'],
+  protectors:['The protectors','The parts that kept you safe: judgment, jealousy, the twelve-year-old who wants it explained. They aren’t cast out. They’re thanked for playing their role so well, and let go home.','A teaching','shield']
 };
 const gl = s => s.replace(/\[\[(\w+)\|([^\]]+)\]\]/g,(m,k,l)=>`<button class="t" type="button" data-g="${k}">${l}</button>`);
 
@@ -464,8 +467,51 @@ const gl = s => s.replace(/\[\[(\w+)\|([^\]]+)\]\]/g,(m,k,l)=>`<button class="t"
 */
 const SEASONS = [
 {
-  id:'oct13', tab:'Oct 13', name:'The Temple', color:'#7FD6A2', latest:true, badge:['13','Oct'], card:'Sacred Container · 5 of 9',
-  eyebrow:'Sacred Container · 5 of 9 · Latest', title:'Your Heart Is a <em>Temple</em>', when:'Tuesday, October 13, 2026',
+  id:'oct27', tab:'Oct 27', name:'Your Own Boat', color:'#E58BB0', latest:true, badge:['27','Oct'], card:'Sacred Container · 6 of 9',
+  eyebrow:'Sacred Container · 6 of 9 · Latest', title:'Build Your Own <em>Boat</em>', when:'Tuesday, October 27, 2026',
+  sessions:[['Oct 27',1]],
+  lede:'You started a voice note meant for me, and fifteen minutes in you didn’t need to send it. You’d seen yourself. Then, before I could get to it, you handed me the exact picture I was about to give you: swim back to land and build your own boat.',
+  brought:'A quiet weekend at your altar, cards pulled, and a process so big you started recording it for me. In the middle of it, eyes closed, you saw your own face and studied it, and you found you could keep seeing it. Then everything that had been fog came up: judgment, jealousy, worthiness, a morning anxiety you hadn’t felt in a long time, and a twelve-year-old who is very, very mad. A few [[protectors|protectors]] you recognized as blankets you’d been wearing since the first scary week of grief. A fear about the business that you shared out loud on a community call anyway, and new work arriving the moment you hung up. A poem that came in the night. And a vision of a lifeboat.',
+  body:[
+    ['eye','You saw yourself','For six months you’d been letting vision step back so the other senses could come into balance. Then, with your eyes closed, you were sitting in front of yourself, studying the curves of your face, your mouth, your eyebrows. And it stayed. It’s with you now, eyes open or closed.',[['I saw myself. I saw myself.','you'],['It’s almost like I’m constantly looking in a mirror.','you']]],
+    ['wave','The body is the boat','Off the lifeboat and into the water, other boats calling: go to that one, go to that one. Not those. Swim back to land, build [[boat|your own boat]], then get back in the water in it. Water is emotion, and the boat you’re building is your own body. You still get to jump in. The safety just comes from inside now.',[['What I feel my job is in this vision is to go back, is swim myself back to the land, build my boat, and then get back in the water in my own boat.','you'],['The body is that vessel. The body, it becomes the boat.','me']]],
+    ['tree','Heels in the water','As a kid on an inner tube, every time the boat swung hard, you stuck your feet straight down into the water so you wouldn’t go flying. Your mind has been doing the same thing with all this new territory. You found a way to ground even in the water, and that skill is still yours.',[['My mind’s been digging its heels; it’s been digging its feet into the water, its heels into the ground.','you'],['You found a way to ground even in the water.','me']]],
+    ['arrow','Stay open in the squeeze','Mid-process, when your body wanted to fold, you pushed your shoulders back and told it to stay open. It found more breath than you knew it could hold. Things tighten again before they expand, and now you know what to do inside the tightening.',[['No, just stay open, just stay open.','you'],['Realizing how much more breath my body could hold and then blow out. And it just felt like this shower of breath.','you'],['I’m made for this. I’m created for this.','you'],['Things will start to tighten up again before they go back into expansion.','me']]]
+  ],
+  work:[
+    ['mirror','A mirror under the rust','Picture a two-foot sheet of metal left outside for twenty years, crusted with rust and calcium. Every time you hum, sing or say a true thing from the [[solar|solar plexus]], it vibrates and the crust shakes off, until it turns out it was never just metal. It’s a mirror. That’s what your voice does, for you and for whoever you sit with.',[['It’s so clear and polished that it’s like this perfect mirror of who you are.','me']]],
+    ['people','Humming for them','On the community calls, when someone is in an open process, you start humming, and where your voice cracks shows you where they’re holding it: the heart, or wherever it is. You’re clearing yourself and sounding a frequency they can use, if they’re willing.',[['Somebody will be in an open process and they’ll be like going through something and I just start like humming.','you'],['You’re moving that energy for yourself once you find it, and them.','me']]],
+    ['mic','Their response isn’t yours to carry','Responsibility was the word glaring at you: skirting around what you see because you’ve already decided how they’ll take it. You don’t know how they’ll take it. More often than not it lands as thank you, and the cleaner you get, the heavier an unsaid truth sits in your heart.',[['I make myself so responsible for other people and how they’re gonna take it, so then I skirt around things thinking they might receive it differently, not even giving them a chance to receive it how they’re going to receive it.','you'],['I feel like I’m about due to piss some people off. You know, like in a loving way.','you'],['Other people’s response to my truth is not my responsibility.','me']]],
+    ['hands','Wield it with love','A truth is like a hammer: it can build a house or it can wreck one. Ask first whether they want a reflection, say it to build rather than to win, and trust that you’ll wield it with love.',[['A hammer can build a house or it could be a murder weapon. Just depends on who’s wielding it.','me'],['Do you need me to just listen or would you like a reflection? Because I’ve got one.','me']]]
+  ],
+  mind:[
+    ['shield','Thank the protectors','Judgment, jealousy, worthiness, and the twelve-year-old who is mad that nobody explained anything. You don’t banish them. They played their roles so well that the whole story made sense. Thank them, call cut, and let them go home with love.',[['You fucking nailed it. You played your role so perfectly.','me'],['I’m not telling you to get the fuck out. I’m telling you thank you.','me']]],
+    ['key','Judgment is hungry curiosity','When somebody else gets what they prayed for and the pit in your stomach asks why not me, that’s curiosity nobody ever sat down and satisfied. Ask the questions the little girl wanted to ask.',[['Well, why not me?','you'],['Judgment stems from curiosity that was unsatisfied.','me']]],
+    ['compass','We’ll see','The farmer whose horse ran off, came back with fifteen more, threw his son, and kept the son home when the army came through. Every time the neighbors called it, he said [[wesee|we’ll see]]. Say the truth with as little of your own stuff in it as you can, and we’ll see.',[['The truth isn’t good and it isn’t bad. The truth just is.','me'],['We’ll see.','you']]],
+    ['letter','Shed the noose','You couldn’t sleep, felt a whoosh behind your eyes, and asked yourself: what if I do grab the journal? A poem came, and five minutes later you were asleep. You don’t have to decode it. The nooses are of our own making, and the dream acquired is standing in your full light with no apology.',[['Listen but not too close, the time to speak, lean in to know, words not used, the feeling sensed. Long for peace, clairvoyance. Overworked, unafraid to labor long, defenses made. Return to here I long desire. Shed the noose, my dream acquired.','you'],['That’s a fucking banger.','me'],['Beaming that light is the dream acquired. That’s the dream come true.','me']]],
+    ['child','Fill her in','The twelve-year-old came forward because she doesn’t understand what’s happening and wants somebody to explain it. She doesn’t need every answer. She needs to feel safe, and to not be lost in it.',[['I’m gonna sit down and talk with her. And I have a picture, and I’m just gonna talk to her. Fill her in. Inform her.','you'],['Bring her into the conversation. That’s what she wants.','me']]]
+  ],
+  rx:[
+    ['wave','Alone in the water','When the pull toward the next boat comes','Stop swimming for a few breaths. Let yourself be in the water with no boat and no raft, and ask what safety feels like for you, in your own body, not for anybody else.','Whenever the old pull shows up.','“Those fish are the monsters in our minds.”','#8FB0F0','now'],
+    ['shield','Thank them and call cut','When judgment, jealousy or an old protector circles back','Don’t cast it out. Say it plainly: you nailed it, you played your role perfectly, thank you. Cut, we’re a wrap on this section. You’re free to go home, with love and gratitude.','Every time one circles back.','“I’m not telling you to get the fuck out. I’m telling you thank you.”','#E58BB0','now'],
+    ['letter','What part of me resists what feels true?','On the page','Write the question down: what part of me resists what feels true, and doesn’t want to admit that it’s true? It doesn’t need answering today and it doesn’t need scrutiny. Just ask what it’s trying to tell you.','Before our next session.','“It’s not wrong. It doesn’t need scrutiny.”','#AC9FF2','open'],
+    ['mic','Hum to the crack','Through the day, and when you sit with people','Slide your voice up and down. Where it cracks or the breath runs out, stay there and be with it. On a call, hum for the person in process and let the cracks show you where they’re holding it.','Daily, whenever it comes.','“The more you move that energy, the more you see, the more you feel, the clearer the picture gets.”','#E8732A','now'],
+    ['arrow','Just stay open','In the middle of a constriction','When your body wants to fold, put the shoulders back, open the chest and keep breathing. Notice how much more breath it can hold, then blow it out. Say it to yourself: just stay open.','Whenever it tightens.','“Things will start to tighten up again before they go back into expansion.”','#7FD6A2','now'],
+    ['child','Fill her in','With your twelve-year-old self','Sit down with a picture of her and tell her what’s going on. She doesn’t need to understand everything. She needs to know she’s safe, and that she isn’t lost in it.','Right after our call, and whenever she gets loud.','“Bring her into the conversation.”','#F2C230','open'],
+    ['hands','Ask before you hand it over','When a truth gets heavy to carry','Ask first: do you need me to just listen, or would you like a reflection? If the answer is yes, say it with love and with as little of your own stuff in it as you can. Then let it land, and we’ll see.','Every time a truth sits heavy.','“It’s about sometimes receiving a truth.”','#5FC0AE','now']
+  ],
+  notes:[
+    '<b>The body is the boat.</b> Swim back to land, build your own, then get back in the water.',
+    '<b>Thank the protectors.</b> Cut, that’s a wrap. Not get out.',
+    '<b>Judgment is curiosity that went hungry.</b> Ask the little girl’s questions.',
+    '<b>Their response to your truth isn’t yours to carry.</b> We’ll see.',
+    '<b>It tightens before it expands.</b> Just stay open.',
+    '<b>Under the rust, a mirror.</b> Keep humming.'
+  ]
+},
+{
+  id:'oct13', tab:'Oct 13', name:'The Temple', color:'#7FD6A2', badge:['13','Oct'], card:'Sacred Container · 5 of 9',
+  eyebrow:'Sacred Container · 5 of 9', title:'Your Heart Is a <em>Temple</em>', when:'Tuesday, October 13, 2026',
   sessions:[['Oct 13',1]],
   lede:'We skipped the heart on purpose the week before. You opened this call with it already pounding, before we’d even said the prayer. It didn’t wait its turn.',
   brought:'Mornings at your altar, and a question you’d written down before we spoke: who is this for, and who is it from? A first tea with a neighbor of twenty years that went by like twenty minutes. A name for the work with your hands, [[hearth|Golden Hearth]], and three late nights building its structure. Two archetypes arriving on their own, Mary Magdalene and Isis. And the prayer for a partner turning into something you hadn’t expected.',
@@ -689,17 +735,26 @@ const SEASONS = [
 
 /* Common threads: [icon, name, color, [[label, text] x3], so] */
 const THREADS = [
-  ['tree','Ground first','#E8604F',[['Sep 2','“My body and the earth are magnetizing to each other.”'],['Sep 22','“The grounding is the boat that I’m in.”'],['Oct 13','Feet in the dirt, then worry.']],'Your ground is the earth itself. When it gets big, you go find a tree, and everything gets simple again.'],
-  ['mic','The unedited voice','#8FB0F0',[['Jul 13','The expert editor.'],['Sep 10','A truth told, then told again.'],['Oct 6','“I just rebelled against my mind and I just said it anyways.”']],'Every session asked a little more of your voice. Each time you said the thing, it was exactly what was needed.'],
+  ['tree','Ground first','#E8604F',[['Sep 2','“My body and the earth are magnetizing to each other.”'],['Sep 22','“The grounding is the boat that I’m in.”'],['Oct 27','The body is the boat.']],'Your ground is the earth itself, and more and more it’s your own body. When it gets big, you go find a tree, and everything gets simple again.'],
+  ['mic','The unedited voice','#8FB0F0',[['Jul 13','The expert editor.'],['Oct 6','“I just rebelled against my mind and I just said it anyways.”'],['Oct 27','“I feel like I’m about due to piss some people off.”']],'Every session asked a little more of your voice. Each time you said the thing, it was exactly what was needed.'],
   ['key','Mine or theirs','#7FD6A2',[['Sep 10','“Was I feeling her feelings thinking that they were mine?”'],['Oct 6','Draw the circle, then put it down.'],['Oct 13','“Who is this for, and who is it from?”']],'You were sorting your energy from everyone else’s before I taught it. Now you have a question for it, and a circle.'],
   ['sun','Your light is yours','#F2C230',[['Jul 13','“You are not too much.”'],['Sep 22','“It’s not a battery that’s depleted.”'],['Oct 13','A temple, not a gift.']],'The old trade was your light for someone’s word that you were worth it. The new rule: people are welcome in, and the light stays home.'],
   ['seed','Confidence, not competence','#AC9FF2',[['Sep 2','“The skills are already there.”'],['Oct 6','“You’re not in the 101 course anymore.”'],['Oct 13','“You’re in your mastery right now.”']],'Nothing new had to be installed. What changed is how much you trust what was already there.'],
-  ['wave','Let it move','#E8732A',[['Sep 10','“Grief is like trying to hold in your pee.”'],['Oct 6','“I just allowed it to flow.”'],['Oct 13','Receiving the hard feelings too.']],'Tears as yawns, the noise from the low belly, grief in waves. Every time you let it move instead of holding it, it cleared.'],
+  ['wave','Let it move','#E8732A',[['Sep 10','“Grief is like trying to hold in your pee.”'],['Oct 13','Receiving the hard feelings too.'],['Oct 27','“Just stay open, just stay open.”']],'Tears as yawns, the noise from the low belly, grief in waves, humming to the crack. Every time you let it move instead of holding it, it cleared.'],
+  ['mirror','Being seen','#CFAAF2',[['Jul 13','The hesitation is visibility, not capability.'],['Oct 13','“I’ve been stifling that part.”'],['Oct 27','“I saw myself. I saw myself.”']],'It started as a fear of being seen. Now you’re seeing yourself first, eyes closed, and the rest is following.'],
   ['arrow','Following the breadcrumbs','#E58BB0',[['Jul 13','“I’m just following the steps.”'],['Oct 6','True You gets its name.'],['Oct 13','Golden Hearth.']],'You keep acting before you fully understand, and the understanding keeps catching up. A calendar became a practice, and the practice found a sibling.']
 ];
 
 /* Scenes */
 const SCENES = {
+  oct27:`<svg viewBox="0 0 520 300" aria-hidden="true"><defs><radialGradient id="sg7" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#E58BB0" stop-opacity=".4"/><stop offset="1" stop-color="#E58BB0" stop-opacity="0"/></radialGradient></defs>
+    <circle cx="260" cy="160" r="105" fill="url(#sg7)"/>
+    <g><animateTransform attributeName="transform" type="translate" values="0 0;0 -6;0 0" dur="5s" repeatCount="indefinite"/>
+    <path d="M190 200 H330 L308 226 H212 Z" fill="none" stroke="#D9A648" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M260 200 V112" stroke="#D9A648" stroke-width="1.6"/>
+    <path d="M263 118 L304 192 H263 Z" fill="#E58BB0" opacity=".85"/></g>
+    ${[0,1,2].map(i=>`<path d="M-40 ${236+i*18} Q25 ${224+i*18} 90 ${236+i*18} T220 ${236+i*18} T350 ${236+i*18} T480 ${236+i*18} T610 ${236+i*18}" stroke="#8FB0F0" stroke-opacity="${.8-i*.22}" fill="none" stroke-width="2"><animateTransform attributeName="transform" type="translate" values="0 0;-40 0;0 0" dur="${6+i}s" repeatCount="indefinite"/></path>`).join('')}
+    <text x="26" y="40" font-family="Instrument Serif,serif" font-style="italic" font-size="22" fill="#EFE7DA" opacity=".85">“build my boat”</text></svg>`,
   oct13:`<svg viewBox="0 0 520 300" aria-hidden="true"><defs><radialGradient id="sg1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#7FD6A2" stop-opacity=".45"/><stop offset="1" stop-color="#7FD6A2" stop-opacity="0"/></radialGradient></defs>
     <circle cx="260" cy="170" r="110" fill="url(#sg1)"><animate attributeName="r" values="100;120;100" dur="6s" repeatCount="indefinite"/></circle>
     <path d="M196 250 V150 L260 98 L324 150 V250" fill="none" stroke="#D9A648" stroke-width="2" stroke-linejoin="round"/>
@@ -811,8 +866,9 @@ function threads(){
     ['Sep 10','Your banner is live.','#E8732A',0],
     ['Sep 22','Calling the light home.','#F2C230',0],
     ['Oct 6','True You has a name.','#8FB0F0',0],
-    ['Oct 13','Our latest session.','#7FD6A2',0],
-    ['Oct 27','Session 6 of 9.','#D9A648',1]
+    ['Oct 13','Your heart is a temple.','#7FD6A2',0],
+    ['Oct 27','Building your own boat.','#E58BB0',0],
+    ['Next','Three still ahead.','#D9A648',1]
   ];
   return `<div class="wide">${road()}
     <div class="sess-head" style="grid-template-columns:1fr"><div><p class="eyebrow">Three months, side by side</p><h2>Common <em>threads</em></h2>
@@ -853,11 +909,13 @@ function buildPage(){
   </div>`;
 }
 
-/* The Build: Molly's 26 practices, sorted by how she uses them. Names must match the session rx names exactly. */
+/* The Build: Molly's 33 practices, sorted by how she uses them. Names must match the session rx names exactly. */
 const BUILD_SRC = Object.fromEntries(SEASONS.map(S=>[S.id,S]));
 const BUILD_LABEL = Object.fromEntries(SEASONS.map(S=>[S.id,S.tab]));
-const START = [['oct13','The doorkeeper’s two questions'],['oct13','Feet in the dirt, then worry'],['oct6','Vision, not definition']];
+const START = [['oct27','Alone in the water'],['oct27','Thank them and call cut'],['oct13','Feet in the dirt, then worry']];
 const MANTRAS = [
+  ['Return to here I long desire. Shed the noose, my dream acquired.','Oct 27 · Your poem'],
+  ['Just stay open.','Oct 27 · Stay open in the squeeze'],
   ['I am magnetized to the earth, and through that magnetization creates safety going up for the rest of my body to receive what is mine to receive.','Sep 2 · The magnetized mantra'],
   ['Thank you, I call my light back to me.','Sep 22 · Call it back'],
   ['We allow people into our hearts. We don’t give our hearts away.','Sep 22 · Calling the light home'],
@@ -870,15 +928,15 @@ const MANTRAS = [
 ];
 const BUILD = [
   {eyebrow:'Ground and body', title:'The <em>foundation</em>', dek:'Your ground is the earth and your own body. These come first, because everything else gets louder without them.',
-   items:[['sep2','Ass in the grass'],['oct13','Feet in the dirt, then worry'],['sep10','Morning body map'],['sep10','Move what’s stuck'],['sep2','Let it move'],['sep22','Twist, open, lengthen'],['sep22','The solar tone'],['oct6','The noise knows when it’s done']]},
+   items:[['sep2','Ass in the grass'],['oct13','Feet in the dirt, then worry'],['sep10','Morning body map'],['sep10','Move what’s stuck'],['sep2','Let it move'],['sep22','Twist, open, lengthen'],['sep22','The solar tone'],['oct6','The noise knows when it’s done'],['oct27','Hum to the crack']]},
   {eyebrow:'Daily rituals', title:'Words and <em>rhythm</em>', dek:'Small, repeated, out loud. The prayers, mantras and sentences that set the tone for everything in between.',
    items:[['jul13','The throat chakra prayer'],['sep2','The magnetized mantra'],['sep22','Call it back, don’t chase it down'],['oct6','Vision, not definition'],['oct13','Temple time, slowly']]},
   {eyebrow:'Journaling and reflection', title:'On the <em>page</em>', dek:'Where the unedited version gets to speak, and where the banner, the dreams and the field get written down.',
-   items:[['jul13','The unedited page'],['sep10','Follow your banner'],['sep10','Catch your dreams'],['oct13','The doorkeeper’s two questions'],['oct13','Let the chakras read you back']]},
+   items:[['jul13','The unedited page'],['sep10','Follow your banner'],['sep10','Catch your dreams'],['oct13','The doorkeeper’s two questions'],['oct13','Let the chakras read you back'],['oct27','What part of me resists what feels true?'],['oct27','Fill her in']]},
   {eyebrow:'In the moment', title:'When it <em>pulls</em>', dek:'For the second an automatic yes is on its way out, or the old pattern starts pulling you off your ground.',
-   items:[['jul13','The full body yes'],['sep2','Sacral first'],['sep2','Return to base camp']]},
+   items:[['jul13','The full body yes'],['sep2','Sacral first'],['sep2','Return to base camp'],['oct27','Alone in the water'],['oct27','Thank them and call cut'],['oct27','Just stay open']]},
   {eyebrow:'Holding space', title:'When you sit with <em>people</em>', dek:'How you open the space, what you listen for, and how you close it so nothing comes home with you that isn’t yours.',
-   items:[['sep10','Open and close the space'],['oct6','Draw the circle, then put it down'],['oct6','The deeper clearing prayer'],['sep22','Follow the thread, don’t grade it'],['oct6','Take the roll call']]}
+   items:[['sep10','Open and close the space'],['oct6','Draw the circle, then put it down'],['oct6','The deeper clearing prayer'],['sep22','Follow the thread, don’t grade it'],['oct6','Take the roll call'],['oct27','Ask before you hand it over']]}
 ];
 
 /* Every tab is its own page, shown in place under the tab bar. */
@@ -896,23 +954,23 @@ document.getElementById('thcount').textContent = THREADS.length;
 
 /* At a glance */
 document.getElementById('appts').innerHTML = SEASONS.map(S=>`<button class="appt" style="--a:${S.color}" data-go="${S.id}"><div class="d">${S.badge[0]}<small>${S.badge[1]}</small></div><div><h4>${S.title}</h4><p>${S.card}</p></div><span class="go">Open →</span></button>`).join('')
-  + `<div class="appt next" style="--a:#8FB0F0"><div class="d">27<small>Oct</small></div><div><h4>Next: Tuesday, October <em>27</em></h4><p>Sacred Container · 6 of 9. Already booked.</p></div></div>`;
+  + `<div class="appt next" style="--a:#8FB0F0"><div class="d">3<small>ahead</small></div><div><h4>Three sessions still <em>ahead</em></h4><p>Six of nine held. The next one isn’t on the calendar yet.</p></div></div>`;
 const CARRY = [
-  ['Ground first.','Ass in the grass, feet in the dirt. Then decide.','I am magnetized to the earth.'],
+  ['Ground first.','Ass in the grass, feet in the dirt, and your own body as the boat. Then decide.','I am magnetized to the earth.'],
   ['Your light is yours.','People are welcome in. The light stays home.','It’s not a battery that’s depleted.'],
-  ['Say what comes.','Feeling, then picture, then words. Say the egg and let it land.',''],
-  ['Who is this for, who is it from?','Sort what’s yours from what’s passing through, then set it down inside the circle.',''],
+  ['Say what comes.','Feeling, then picture, then words. Their response isn’t yours to carry.','We’ll see.'],
+  ['Thank the protectors.','Cut, that’s a wrap, not get out. Then ask the questions the little girl never got answered.',''],
   ['Confidence, not competence.','The skills were always there. You’re not in the 101 course anymore.','It’s been here the whole time.']
 ];
 document.getElementById('carry').innerHTML = CARRY.map(([b,s,q])=>`<li><div><b>${b}</b><span>${s}${q?` <q>${q}</q>`:''}</span></div></li>`).join('');
 /* Questions to ponder: [question, context, from-tab, from-label, color] */
 const QS = [
-  ['How long did the worry actually last, out there in the grass?','The Aries challenge from October 13. Bring the number, and what your body did with it.','oct13','From Oct 13 · Feet in the dirt','#7FD6A2'],
+  ['What part of you resists what feels true, and what is it trying to tell you?','The journal question from October 27. It doesn’t need scrutiny, and it doesn’t need answering all at once.','oct27','From Oct 27 · What part of me resists','#E58BB0'],
+  ['What did your twelve-year-old say when you filled her in?','You were going to sit down with her right after our call. Bring whatever she told you.','oct27','From Oct 27 · Fill her in','#E58BB0'],
+  ['Which truth did you say out loud since we spoke, and how was it received?','You said you’re about due to piss some people off, in a loving way. Their response isn’t yours to carry. We’ll see.','oct27','From Oct 27 · Their response','#E58BB0'],
+  ['What is your boat made of so far?','Back on land, building. Notice what you reached for this week instead of swimming to the next boat.','oct27','From Oct 27 · The body is the boat','#E58BB0'],
   ['Where did your heart’s door policy get tested since we spoke, and did it hold?','Shoes off, agreements respected. No is a complete sentence.','oct13','From Oct 13 · The door policy','#7FD6A2'],
-  ['Which part of what you pray for in a partner got to rise and breathe in you this week?','You said you’d been stifling her. Notice where she showed up.','oct13','From Oct 13 · Already yours','#7FD6A2'],
   ['If True You gained one new characteristic this week, what would it be?','Vision, not definition. Say it out loud and see who it calls.','oct6','From Oct 6 · Vision, not definition','#8FB0F0'],
-  ['Has anything from the ceremony ripened enough to bring in?','You’ve said it isn’t the time yet, because your view of it keeps shifting week to week. No rush. Only if it’s ready.','oct6','From Oct 6 · The complete instrument','#8FB0F0'],
-  ['Who has surfaced as you called your light back, and how did you feel afterward?','The retrieval keeps running. Notice who came.','sep22','From Sep 22 · Calling the light home','#F2C230'],
   ['What has your banner been showing you that you haven’t acted on yet?','The more you respond to it, the brighter it gets.','sep10','From Sep 10 · The banner','#E8732A']
 ];
 document.getElementById('qs').innerHTML = QS.map(([q,c,go,lab,col],i)=>`<li class="q${i===QS.length-1?' wide-q':''}" style="--qc:${col}"><p>${q}</p><span>${c}</span><button data-go="${go}">${lab} →</button></li>`).join('');
